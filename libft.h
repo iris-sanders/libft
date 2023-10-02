@@ -69,7 +69,15 @@ void    *ft_memmove(void *dest, const void *src, size_t n);
 /// @param src source string from which data will be copied.
 /// @param destsize is the maximum number of characters that can be copied to dest without causing problems.
 /// @return length of src 
-size_t ft_strlcpy(char *dest, char *src, size_t destsize);
+size_t ft_strlcpy(char *dest, const char *src, size_t destsize);
+
+/// @brief concatenates the source string ‘src’ to the end of the destination string ‘dest’ while ensuring that the total length of the concatenated string does not exceed a specified maximum size ‘destsize’.
+/// @param dest pointer to a character array (string) where the function will concatenate the 'src' string.
+/// @param src pointer to a constant character array (string) that contains the characters to be added to the end of the dest string.
+/// @param destsize maximum size or capacity of the dest string. It specifies how many characters can be safely added to dest before it reaches its limit.
+/// @return If the destination string is already at or exceeds this size, it returns the sum of destsize and the length of the source string. Otherwise, it performs the concatenation, and returns the total length of the combined string.
+size_t ft_strlcat(char *dest, const char *src, size_t destsize);
+
 
 
 
