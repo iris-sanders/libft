@@ -64,6 +64,11 @@ void    *ft_memcpy(void *dest, const void *src, size_t n);
 /// @return pointer to destination
 void    *ft_memmove(void *dest, const void *src, size_t n);
 
+/// @brief copies characters from src to dest, but it doesnt exceed the maximum size of dest, ensures that dest always ends with a null terminator and is a valid C string. If destsize is zero, the destination buffer is too small to copy anything so it returns the length of the source string (ft_strlen(src)). This is a safety check to avoid trying to copy into a buffer that cannot hold any data. destsize - 1, ensures that we don't go beyond the maximum allowed size in the destination buffer.
+/// @param dest destination buffer where the string will be copied to.
+/// @param src source string from which data will be copied.
+/// @param destsize is the maximum number of characters that can be copied to dest without causing problems.
+/// @return length of src 
 size_t ft_strlcpy(char *dest, char *src, size_t destsize);
 
 
