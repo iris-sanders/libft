@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/10 16:35:02 by irsander          #+#    #+#             */
+/*   Updated: 2023/10/10 16:51:19 by irsander         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void    *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-    // if memory overlaps copy backwards
 	if (dest > src)
 	{
 		while (n > 0)
@@ -12,8 +23,8 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
 		}
 		return (dest);
 	}
-    else if (dest < src)
-        ft_memcpy(dest, src, n);
+	else if (dest < src)
+		ft_memcpy(dest, src, n);
 	return (dest);
 }
 
