@@ -78,6 +78,73 @@ size_t ft_strlcpy(char *dest, const char *src, size_t destsize);
 /// @return If the destination string is already at or exceeds this size, it returns the sum of destsize and the length of the source string. Otherwise, it performs the concatenation, and returns the total length of the combined string.
 size_t ft_strlcat(char *dest, const char *src, size_t destsize);
 
+/// @brief converts a lower-case letter to the corresponding upper-case letter
+/// @param c represents the ASCII value of a character to be converted to uppercase.
+/// @return If the argument is a lower-case letter, it returns the corresponding upper-case letter. Otherwise, the argument is returned unchanged.
+int ft_toupper(int c);
+
+/// @brief converts a upper-case letter to the corresponding lower-case letter
+/// @param c represents the ASCII value of a character to be converted to lowercase.
+/// @return If the argument is an upper-case letter, it returns the corresponding lower-case letter. Otherwise, the argument is returned unchanged.
+int ft_tolower(int c);
+
+/// @brief  searches for a specific character c within the given string s.
+/// @param s a pointer to a constant character string, which is the string to search within.
+/// @param c an integer representing a character, which is the character to search for within the string s.
+/// @return If it finds the character, it returns a pointer to the location of that character in the string. If the character is not found or the end of the string is reached, it returns NULL to indicate that c was not present in the string.
+char *ft_strchr(const char *s, int c);
+
+/// @brief searches for the last occurrence of a character c in the given string s
+/// @param s a pointer to a constant character string, which is the string to search within.
+/// @param c an integer representing a character, which is the character to search for within the string s.
+/// @return If it finds the character, it returns a pointer to the location of that character in the string. If the character is not found or the end of the string is reached, it returns NULL to indicate that c was not present in the string.
+char	*ft_strrchr(const char *s, int c);
+
+/// @brief compares strings s1 and s2, compares not more than 'n' characters. characters that appear after a '\0' character are not compared
+/// @param s1 the first string to be compared
+/// @param s2 the second string to be compared
+/// @param n the maximum number of characters to be compared
+/// @return if Return value < 0 then it indicates str1 is less than str2 - if Return value > 0 then it indicates str2 is less than str1 - if Return value = 0 then it indicates str1 is equal to str2
+int ft_strncmp(const char *s1, const char *s2, size_t n);
+
+/// @brief locates the first occurrence of 'c' (converted to an unsigned char) in string s.
+/// @param s pointer to the block of memory that has to be searched
+/// @param c value to be passed as an int, but the function performs a byte per byte search using the unsigned char conversion of this value
+/// @param n number of bytes to be searched
+/// @return pointer to the matching byte or NULL if the character does not occur in the given memory area.
+void *ft_memchr(const void *s, int c, size_t n);
+
+/// @brief compares the first n bytes of memory area s1 and memory area s2
+/// @param s1 pointer to a block of memory
+/// @param s2 pointer to a block of memory
+/// @param n the number of bytes to be compared
+/// @return zero if the two strings are identical, otherwise it returns the difference between the first two differing bytes.
+int ft_memcmp(const void *s1, const void *s2, size_t n);
+
+/// @brief 
+/// @param haystack 
+/// @param needle 
+/// @param len 
+/// @return 
+char *ft_strnstr(const char *haystack, const char *needle, size_t len);
+
+/// @brief converts the string argument 's' to an integer
+/// @param s the string representation of an integral number
+/// @return returns the converted integral number as an int value
+int	ft_atoi(const char *s);
+
+/// @brief allocates memory and returns a pointer to it. calloc sets the allocated memory to zero
+/// @param count number of elements to be allocated
+/// @param size size of the elements
+/// @return pointer to the allocated memory, or NULL if malloc fails
+void *ft_calloc(size_t count, size_t size);
+
+/// @brief allocates sufficient memory and copies s1 
+/// @param s1 the string to be copied
+/// @return the copied string s2
+char *ft_strdup(const char *s1);
+
+
 
 
 

@@ -12,11 +12,21 @@ size_t ft_strlcat(char *dest, const char *src, size_t destsize)
 		return (destsize + src_i);
 	i = 0;
 	while (src[i] && dest_i < (destsize -1))
-	{
-		dest[dest_i] = src[i];
-		dest_i++;
-		i++;
-	}
+		dest[dest_i++] = src[i++];
 	dest[dest_i] = '\0';
 	return (dest_i - i + src_i);
 }
+
+// int main(void)
+// {
+//     char s [] = "goodbye";
+//     char d [] = "hello";
+//     char s2 [] = "goodbye";
+//     char d2 [] = "hello";
+
+//     ft_strlcat(d, s, sizeof(d));
+//     printf("%s\n", d);
+
+//     strlcat(d2, s2, sizeof(d2));
+//     printf("%s\n", d2);
+// }

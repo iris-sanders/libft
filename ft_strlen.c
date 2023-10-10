@@ -12,5 +12,5 @@ size_t ft_strlen(const char *s)
 // int main(void)
 // {
 //     printf("my function: %lu\n", ft_strlen("hallo"));
-//     printf("my function: %lu\n", strlen("hallo"));
+//     printf("real function: %lu\n", strlen("hallo"));
 // }
