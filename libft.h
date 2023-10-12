@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:36:34 by irsander          #+#    #+#             */
-/*   Updated: 2023/10/10 17:18:56 by irsander         ###   ########.fr       */
+/*   Updated: 2023/10/12 09:09:35 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -203,5 +203,28 @@ void	*ft_calloc(size_t count, size_t size);
 /// @param s1 the string to be copied
 /// @return the copied string s2
 char	*ft_strdup(const char *s1);
+
+/// @brief allocates with malloc and returns a substring from the string 's'
+/// @param s the string to make the substring out of
+/// @param start the starting index of the substring in string s
+/// @param len the maximum length of the substring
+/// @return the substring
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+/// @brief allocates with malloc and returns a new string, which is the result
+/// of the concatenation of s1 and s2
+/// @param s1 the first string
+/// @param s2 the string to be put after the first string
+/// @return the result of the concatenation of s1 and s2
+char	*ft_strjoin(char const *s1, char const *s2);
+
+/// @brief allocates with malloc and return s a copy of s1 with the characters
+/// specified in 'set' removed from the beginning and the end of the string
+/// @param s1 
+/// @param set 
+/// @return 
+char    *ft_strtrim(char const *s1, char const *set);
+
+
 
 #endif

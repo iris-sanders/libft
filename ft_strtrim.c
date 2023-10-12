@@ -1,49 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 15:48:17 by irsander          #+#    #+#             */
-/*   Updated: 2023/10/11 19:56:42 by irsander         ###   ########.fr       */
+/*   Created: 2023/10/12 08:19:04 by irissanders       #+#    #+#             */
+/*   Updated: 2023/10/12 09:47:44 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *s)
+char    *ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	neg_num;
-	int	num;
+    
+    int start;
+    int end;
 
-	i = 0;
-	neg_num = 1;
-	num = 0;
-	while ((s[i] >= 9 && s[i] <= 13)
-		|| (s[i] == 32))
-		i++;
-	if ((s[i] == '-' || s[i] == '+')
-		&& (s[i +1] >= '0' && s[i +1] <= '9'))
-	{
-		if (s[i] == '-')
-			neg_num = -1;
-		i++;
-	}
-	while (s[i] >= '0' && s[i] <= '9')
-	{
-		num = num * 10 + (s[i] - '0');
-		i++;
-	}
-	return (num * neg_num);
+    start = 0;
+    while (s1[start] && ft_strchr(set, s1[start]))
+        start++;
+    end = ft_strlen(s1);
+    while (end > 0 && ft_strrchr(set, s1[end]))
+        end--;
+    return (ft_substr(s1, start, end - start +1));
 }
 
 // int main(void)
 // {
-//     char *s;
+//     char s1[] = "hellogoodbyehello";
+//     char *set = "hello";
 
-//     s = "123";
-
-//     printf("%i\n", ft_atoi(s));
+//     printf("%s\n", ft_strtrim(s1, set));
 // }
