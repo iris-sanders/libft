@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: irsander <irsander@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/10 16:36:41 by irsander          #+#    #+#              #
-#    Updated: 2023/10/12 08:59:43 by irsander         ###   ########.fr        #
+#                                                         ::::::::             #
+#    Makefile                                           :+:    :+:             #
+#                                                      +:+                     #
+#    By: irsander <irsander@student.42.fr>            +#+                      #
+#                                                    +#+                       #
+#    Created: 2023/10/10 16:36:41 by irsander      #+#    #+#                  #
+#    Updated: 2023/10/13 09:19:54 by irissanders   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,11 @@ SRC			=	ft_isalpha.c \
 				ft_substr.c \
 				ft_strjoin.c \
 				ft_strtrim.c \
-
+				ft_strmapi.c \
+				ft_striteri.c \
+				ft_putchar_fd.c \
+				ft_putendl_fd.c \
+				ft_putnbr_fd.c \
 
 OFILES		= $(SRC:.c=.o)
 

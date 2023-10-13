@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:36:34 by irsander          #+#    #+#             */
-/*   Updated: 2023/10/12 09:09:35 by irsander         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   libft.h                                            :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: irsander <irsander@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/10 16:36:34 by irsander      #+#    #+#                 */
+/*   Updated: 2023/10/13 09:19:30 by irissanders   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -218,12 +218,48 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 /// @return the result of the concatenation of s1 and s2
 char	*ft_strjoin(char const *s1, char const *s2);
 
-/// @brief allocates with malloc and return s a copy of s1 with the characters
-/// specified in 'set' removed from the beginning and the end of the string
-/// @param s1 
-/// @param set 
-/// @return 
+/// @brief allocates with malloc and cuts the characters specified in set
+/// from the start and end of string s1
+/// @param s1 the string to be trimmed
+/// @param set the reference set of characters to trim
+/// @return a copy of s1, with the characters specified in 'set' removed from
+/// the beginning and the end of the string
 char    *ft_strtrim(char const *s1, char const *set);
+
+/// @brief applies the function 'f' to each character of the string 's',
+/// and passing its index as first argument to create a new string resulting
+/// from successive applications of 'f'
+/// @param s the string on which to iterate
+/// @param f the function to apply to each character
+/// @return the string created from the successive applications of 'f'
+/// or NULL if the allocation fails
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+/// @brief applies the function 'f' on each character of the string passed as 
+/// an argument, passing its index as first argument
+/// @param s the string on which to iterate
+/// @param f the function to apply to each character
+void    ft_striteri(char *s, void (*f)(unsigned int, char *));
+
+/// @brief outputs the character 'c' to the given file descriptor
+/// @param c the character to output
+/// @param fd the file descriptor on which to write
+void    ft_putchar_fd(char c, int fd);
+
+/// @brief outputs the string 's' to the given file descriptor followed by
+/// a newline
+/// @param s the string to output
+/// @param fd the file descriptor on which to write
+void    ft_putendl_fd(char *s, int fd);
+
+/// @brief outputs the integer 'n' to the given file descriptor
+/// @param n the integer to output
+/// @param fd the file descriptor on which to write
+void    ft_putnbr_fd(int n, int fd);
+
+
+
+
 
 
 
