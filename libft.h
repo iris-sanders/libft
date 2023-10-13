@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   libft.h                                            :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: irsander <irsander@student.42.fr>            +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2023/10/10 16:36:34 by irsander      #+#    #+#                 */
-/*   Updated: 2023/10/13 09:19:30 by irissanders   ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/10 16:36:34 by irsander          #+#    #+#             */
+/*   Updated: 2023/10/13 15:56:29 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -256,8 +256,6 @@ void    ft_putendl_fd(char *s, int fd);
 /// @param n the integer to output
 /// @param fd the file descriptor on which to write
 void    ft_putnbr_fd(int n, int fd);
-
-
 
 
 
