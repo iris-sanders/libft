@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/10 16:36:34 by irsander      #+#    #+#                 */
-/*   Updated: 2023/10/14 16:27:09 by irissanders   ########   odam.nl         */
+/*   Updated: 2023/10/14 19:06:26 by irissanders   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -271,6 +271,14 @@ void	ft_putstr_fd(char *s, int fd);
 /// @return The array of new strings resulting from the split.
 /// NULL if the allocation fails.
 char **ft_split(char const *s, char c);
+
+/// @brief Allocates with malloc and returns a string
+/// representing the integer received as an argument.
+/// Negative numbers must be handled
+/// @param n the integer to convert
+/// @return The string representing the integer.
+/// NULL if the allocation fails
+char *ft_itoa(int n);
 
 
 

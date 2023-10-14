@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/12 10:03:17 by irissanders   #+#    #+#                 */
-/*   Updated: 2023/10/14 18:18:42 by irissanders   ########   odam.nl         */
+/*   Updated: 2023/10/14 19:04:00 by irissanders   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,24 +50,28 @@ static void ft_free(char **ptr_to_arrays)
 	free(ptr_to_arrays);
 }
 
-static
+static int init(char const *s, char c, char ***ptr_to_arrays)
+{
+	int amount_of_words;
 
-// static void	ft_free(char **);
+	if (!s)
+		return (1);
+    amount_of_words = word_count(s, c);
+	*ptr_to_arrays = malloc((amount_of_words + 1) * sizeof(char *));
+	if (!*ptr_to_arrays)
+		return (1);
+	return (0);
+}
 
 char **ft_split(char const *s, char c)
 {
-	int	amount_of_words;
 	int word_len;
 	char **ptr_to_arrays;
 	int	i;
 	int j;
 	
-	if (!s)
-		return (NULL);
-    amount_of_words = word_count(s, c);
-	ptr_to_arrays = malloc((amount_of_words +1) * sizeof(char *));
-	if (!ptr_to_arrays)
-		return (NULL);
+	if (init(s, c, &ptr_to_arrays) == 1)
+		return NULL;
 	i = 0;
 	j = 0;
 	while (s[i])
@@ -80,9 +84,8 @@ char **ft_split(char const *s, char c)
 		ptr_to_arrays[j] = malloc((word_len +1) * sizeof(char));
 		if (!ptr_to_arrays[j])
 			ft_free(ptr_to_arrays);
-		ft_strlcpy(ptr_to_arrays[j], &s[i], word_len+1);
+		ft_strlcpy(ptr_to_arrays[j++], &s[i], word_len+1);
 		i = word_len + i;
-		j++;
 	}
 	ptr_to_arrays[j] = NULL;
 	return (ptr_to_arrays);
