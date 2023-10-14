@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:36:34 by irsander          #+#    #+#             */
-/*   Updated: 2023/10/13 15:56:29 by irsander         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   libft.h                                            :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: irsander <irsander@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/10 16:36:34 by irsander      #+#    #+#                 */
+/*   Updated: 2023/10/14 16:27:09 by irissanders   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -256,6 +256,22 @@ void    ft_putendl_fd(char *s, int fd);
 /// @param n the integer to output
 /// @param fd the file descriptor on which to write
 void    ft_putnbr_fd(int n, int fd);
+
+/// @brief outputs the string 's' to the given file descriptor
+/// @param s the string to output
+/// @param fd the file descriptor on which to write
+void	ft_putstr_fd(char *s, int fd);
+
+/// @brief Allocates with malloc and returns an array
+///of strings obtained by splitting ’s’ using the
+///character ’c’ as a delimiter.  The array must end
+///with a NULL pointer.
+/// @param s the string to be split
+/// @param c the delimiter character
+/// @return The array of new strings resulting from the split.
+/// NULL if the allocation fails.
+char **ft_split(char const *s, char c);
+
 
 
 
