@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:36:17 by irsander          #+#    #+#             */
-/*   Updated: 2023/10/12 09:37:35 by irsander         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_substr.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: irsander <irsander@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/10 16:36:17 by irsander      #+#    #+#                 */
+/*   Updated: 2023/10/15 12:21:03 by irissanders   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *substring;
+	char	*substring;
 	size_t	s_len;
 
 	s_len = ft_strlen(s);
@@ -29,7 +29,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substring);
 }
 
-// 	if (start + len > s_len) //when the start+len are bigger then s_len it overflows. not sufficient memory
+// 	if (start + len > s_len) //when the start+len are bigger 
+// then s_len it overflows. not sufficient memory
 
 // int main(void)
 // {

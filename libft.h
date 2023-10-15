@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/10 16:36:34 by irsander      #+#    #+#                 */
-/*   Updated: 2023/10/14 19:06:26 by irissanders   ########   odam.nl         */
+/*   Updated: 2023/10/15 12:15:51 by irissanders   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -224,7 +224,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 /// @param set the reference set of characters to trim
 /// @return a copy of s1, with the characters specified in 'set' removed from
 /// the beginning and the end of the string
-char    *ft_strtrim(char const *s1, char const *set);
+char	*ft_strtrim(char const *s1, char const *set);
 
 /// @brief applies the function 'f' to each character of the string 's',
 /// and passing its index as first argument to create a new string resulting
@@ -233,29 +233,29 @@ char    *ft_strtrim(char const *s1, char const *set);
 /// @param f the function to apply to each character
 /// @return the string created from the successive applications of 'f'
 /// or NULL if the allocation fails
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /// @brief applies the function 'f' on each character of the string passed as 
 /// an argument, passing its index as first argument
 /// @param s the string on which to iterate
 /// @param f the function to apply to each character
-void    ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 /// @brief outputs the character 'c' to the given file descriptor
 /// @param c the character to output
 /// @param fd the file descriptor on which to write
-void    ft_putchar_fd(char c, int fd);
+void	ft_putchar_fd(char c, int fd);
 
 /// @brief outputs the string 's' to the given file descriptor followed by
 /// a newline
 /// @param s the string to output
 /// @param fd the file descriptor on which to write
-void    ft_putendl_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 /// @brief outputs the integer 'n' to the given file descriptor
 /// @param n the integer to output
 /// @param fd the file descriptor on which to write
-void    ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 /// @brief outputs the string 's' to the given file descriptor
 /// @param s the string to output
@@ -270,7 +270,7 @@ void	ft_putstr_fd(char *s, int fd);
 /// @param c the delimiter character
 /// @return The array of new strings resulting from the split.
 /// NULL if the allocation fails.
-char **ft_split(char const *s, char c);
+char	**ft_split(char const *s, char c);
 
 /// @brief Allocates with malloc and returns a string
 /// representing the integer received as an argument.
@@ -278,11 +278,6 @@ char **ft_split(char const *s, char c);
 /// @param n the integer to convert
 /// @return The string representing the integer.
 /// NULL if the allocation fails
-char *ft_itoa(int n);
-
-
-
-
-
+char	*ft_itoa(int n);
 
 #endif

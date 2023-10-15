@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/12 10:03:17 by irissanders   #+#    #+#                 */
-/*   Updated: 2023/10/14 19:04:00 by irissanders   ########   odam.nl         */
+/*   Updated: 2023/10/15 12:37:13 by irissanders   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	word_count(char const *s, char c)
 {
-	int i;
+	int	i;
 	int	counter;
 
 	i = 0;
@@ -32,46 +32,47 @@ static int	word_count(char const *s, char c)
 
 int	word_length(const char *s, char c)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (s[i] && s[i] != c)
 		i++;
-	return(i);
+	return (i);
 }
 
-static void ft_free(char **ptr_to_arrays)
+static int	ft_free(char **ptr_to_arrays)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(ptr_to_arrays[i])
+	while (ptr_to_arrays[i])
 		free(ptr_to_arrays[i++]);
 	free(ptr_to_arrays);
+	return (0);
 }
 
-static int init(char const *s, char c, char ***ptr_to_arrays)
+static int	init(char const *s, char c, char ***ptr_to_arrays)
 {
-	int amount_of_words;
+	int	amount_of_words;
 
 	if (!s)
 		return (1);
-    amount_of_words = word_count(s, c);
+	amount_of_words = word_count(s, c);
 	*ptr_to_arrays = malloc((amount_of_words + 1) * sizeof(char *));
 	if (!*ptr_to_arrays)
 		return (1);
 	return (0);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	int word_len;
-	char **ptr_to_arrays;
-	int	i;
-	int j;
-	
+	int		word_len;
+	char	**ptr_to_arrays;
+	int		i;
+	int		j;
+
 	if (init(s, c, &ptr_to_arrays) == 1)
-		return NULL;
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
@@ -82,9 +83,9 @@ char **ft_split(char const *s, char c)
 			break ;
 		word_len = word_length(&s[i], c);
 		ptr_to_arrays[j] = malloc((word_len +1) * sizeof(char));
-		if (!ptr_to_arrays[j])
-			ft_free(ptr_to_arrays);
-		ft_strlcpy(ptr_to_arrays[j++], &s[i], word_len+1);
+		if (!ptr_to_arrays[j] && (ft_free(ptr_to_arrays) == 0))
+			return (NULL);
+		ft_strlcpy(ptr_to_arrays[j++], &s[i], word_len +1);
 		i = word_len + i;
 	}
 	ptr_to_arrays[j] = NULL;
@@ -96,7 +97,7 @@ char **ft_split(char const *s, char c)
 // 	char *s = "hallo hoe gaat het";
 // 	char **result;
 // 	int i;
-	
+
 // 	result = ft_split(s, ' ');
 // 	i = 0;
 // 	while(result[i])
@@ -113,7 +114,7 @@ char **ft_split(char const *s, char c)
 // 	char **ptr_to_arrays;
 // 	int	i;
 // 	int j;
-	
+
 // 	if (!s)
 // 		return (NULL);
 // 	// 1. count words

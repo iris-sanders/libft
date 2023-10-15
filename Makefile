@@ -6,7 +6,7 @@
 #    By: irsander <irsander@student.42.fr>            +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/10/10 16:36:41 by irsander      #+#    #+#                  #
-#    Updated: 2023/10/14 16:28:01 by irissanders   ########   odam.nl          #
+#    Updated: 2023/10/14 19:09:35 by irissanders   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ SRC			=	ft_isalpha.c \
 				ft_putnbr_fd.c \
 				ft_putstr_fd.c \
 				ft_split.c \
+				ft_itoa.c \
 
 OFILES		= $(SRC:.c=.o)
 
