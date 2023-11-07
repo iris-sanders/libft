@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   ft_lstadd_front.c                                  :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: irsander <irsander@student.42.fr>            +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2023/10/31 08:28:12 by irissanders   #+#    #+#                 */
-/*   Updated: 2023/11/05 16:59:05 by irissanders   ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/31 08:28:12 by irissanders       #+#    #+#             */
+/*   Updated: 2023/11/07 15:23:26 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // 	t_list *second_node;
 // 	int	first_value = 5;
 // 	int	second_value = 7;
-	
+
 // 	first_node = ft_lstnew(&first_value);
 // 	second_node = ft_lstnew(&second_value);
 // 	ft_lstadd_front(&first_node, second_node);

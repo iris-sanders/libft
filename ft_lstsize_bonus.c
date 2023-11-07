@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   ft_lstsize.c                                       :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: irsander <irsander@student.42.fr>            +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2023/11/05 15:07:03 by irissanders   #+#    #+#                 */
-/*   Updated: 2023/11/05 15:54:51 by irissanders   ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/05 15:07:03 by irissanders       #+#    #+#             */
+/*   Updated: 2023/11/07 15:39:59 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (lst)
@@ -32,7 +32,7 @@ int ft_lstsize(t_list *lst)
 // 	int i;
 // 	int number;
 // 	int result;
-	
+
 // 	i = 1;
 // 	while (argc > i)
 // 	{

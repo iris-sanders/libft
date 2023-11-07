@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   ft_lstlast.c                                       :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: irsander <irsander@student.42.fr>            +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2023/11/05 15:52:06 by irissanders   #+#    #+#                 */
-/*   Updated: 2023/11/05 16:18:24 by irissanders   ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/05 15:52:06 by irissanders       #+#    #+#             */
+/*   Updated: 2023/11/07 15:27:14 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);
@@ -28,7 +28,7 @@ t_list *ft_lstlast(t_list *lst)
 // 	int i;
 // 	int number;
 // 	t_list *result;
-	
+
 // 	i = 1;
 // 	while (argc > i)
 // 	{

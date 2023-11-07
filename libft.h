@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   libft.h                                            :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: irsander <irsander@student.42.fr>            +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2023/10/10 16:36:34 by irsander      #+#    #+#                 */
-/*   Updated: 2023/11/05 17:31:33 by irissanders   ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/10 16:36:34 by irsander          #+#    #+#             */
+/*   Updated: 2023/11/07 15:30:10 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <string.h>
 
 // list are nodes in linked list
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -301,19 +301,19 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 /// @brief counts the number of nodes in a list
 /// @param lst the beginning of the list
 /// @return the length of the list
-int ft_lstsize(t_list *lst);
+int		ft_lstsize(t_list *lst);
 
 /// @brief returns the last node of the list
 /// @param lst the beginning of the list
 /// @return last node of the list
-t_list *ft_lstlast(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
 
 /// @brief adds the node 'new' at the end of the list
 /// @param lst the address of a pointer to the first link 
 /// of a list
 /// @param new the address of a pointer to the node to be
 /// added to the list
-void ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 /// @brief takes as a parameter a node and frees the memory of
 /// the node's content using the function 'del' given as a 
@@ -322,7 +322,7 @@ void ft_lstadd_back(t_list **lst, t_list *new);
 /// @param lst the node to free
 /// @param del the address of the function used to delete
 /// the content
-void ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
 
 /// @brief deletes and frees the given node and every successor
 /// of that node, using the function 'del' and free.
@@ -330,14 +330,14 @@ void ft_lstdelone(t_list *lst, void (*del)(void*));
 /// @param lst the address of a pointer to a node
 /// @param del the address of the function used to delete
 /// the content of the node
-void ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
 
 /// @brief iterates the list 'lst' and applies the function
 /// 'f' on the content of each node
 /// @param lst the address of a pointer to a node
 /// @param f the address of the function used to iterate on 
 /// the list
-void ft_lstiter(t_list *lst, void (*f)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 /// @brief iterates the list 'lst' and applies the function
 /// 'f' on the content of each node. Creates a new list
@@ -350,8 +350,6 @@ void ft_lstiter(t_list *lst, void (*f)(void *));
 /// @param del the address of the function used to delete
 /// the content of a node if needed
 /// @return the new list / NULL if the allocation fails
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
