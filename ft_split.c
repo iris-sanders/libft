@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/12 10:03:17 by irissanders   #+#    #+#                 */
-/*   Updated: 2023/10/15 12:37:13 by irissanders   ########   odam.nl         */
+/*   Updated: 2023/10/15 13:40:22 by irissanders   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	word_length(const char *s, char c)
 	return (i);
 }
 
-static int	ft_free(char **ptr_to_arrays)
+static void	*ft_free(char **ptr_to_arrays)
 {
 	int	i;
 
@@ -48,7 +48,7 @@ static int	ft_free(char **ptr_to_arrays)
 	while (ptr_to_arrays[i])
 		free(ptr_to_arrays[i++]);
 	free(ptr_to_arrays);
-	return (0);
+	return (NULL);
 }
 
 static int	init(char const *s, char c, char ***ptr_to_arrays)
@@ -83,8 +83,8 @@ char	**ft_split(char const *s, char c)
 			break ;
 		word_len = word_length(&s[i], c);
 		ptr_to_arrays[j] = malloc((word_len +1) * sizeof(char));
-		if (!ptr_to_arrays[j] && (ft_free(ptr_to_arrays) == 0))
-			return (NULL);
+		if (!ptr_to_arrays[j])
+			return (ft_free(ptr_to_arrays));
 		ft_strlcpy(ptr_to_arrays[j++], &s[i], word_len +1);
 		i = word_len + i;
 	}
